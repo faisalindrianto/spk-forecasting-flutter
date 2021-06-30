@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "935410760600",
+    "project_id": "spk-soto",
+    "storage_bucket": "spk-soto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935410760600:android:28880f3c7afc7b56b189ed",
+        "android_client_info": {
+          "package_name": "com.example.spk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935410760600-tldhlcpmed4pjhk2vlfudjsd1ep65n05.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.spk",
+            "certificate_hash": "ff0772dbd5ecb0d7c764d797e977b8a0bdf97b9c"
+          }
+        },
+        {
+          "client_id": "935410760600-rivm0dq24a0hv2e44pbtjfv45k112od6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiXYQRtMtGea3ci-xyw0uyHi5O_uk_9_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935410760600-rivm0dq24a0hv2e44pbtjfv45k112od6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "935410760600-g5a7grsp8i85iu6p2difr5gr2tnc51gi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sajiwo.spk"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
