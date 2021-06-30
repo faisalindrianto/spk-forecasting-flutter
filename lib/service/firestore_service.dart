@@ -26,13 +26,13 @@ class FirestoreService{
     List<PenjualanModel> data = [];
 
     if(limit != null) {
-      await dataPenjualan.limit(limit).orderBy("tanggal_lengkap").get().then((snap) {
+      await dataPenjualan.limit(limit).orderBy("tanggal_lengkap", descending: true).get().then((snap) {
         snap.docs.forEach((doc) {
           data.add(PenjualanModel.fromDocumentSnapshot(doc));
         });
       });
     } else {
-      await dataPenjualan.orderBy("tanggal_lengkap").get().then((snap) {
+      await dataPenjualan.orderBy("tanggal_lengkap", descending: true).get().then((snap) {
         snap.docs.forEach((doc) {
           data.add(PenjualanModel.fromDocumentSnapshot(doc));
         });

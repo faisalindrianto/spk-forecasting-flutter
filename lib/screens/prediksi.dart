@@ -431,74 +431,6 @@ class _PrediksiPageState extends State<PrediksiPage> {
   }
 
   Future<PredictionResult> startPrediction() async {
-    // dummy data
-    List data = [
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 20,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 25,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 23,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 24,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 25,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 26,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 23,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 21,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 22,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 30,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 22,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 25,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 24,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 27,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 24,
-      },
-      {
-        "time" : "minggu 4 bulan 8",
-        "jumlah" : 30,
-      },
-    ];
-
     int startX = -1;
     double sumX = 0;
     double sumY = 0;
@@ -522,21 +454,6 @@ class _PrediksiPageState extends State<PrediksiPage> {
       print("Minggu ke ${data.minggu} bulan ${data.bulan} ${data.tahun} - X : $startX | Y : ${data.jumlah} | XX : ${startX * startX} | XY : ${startX * data.jumlah}");
     });
 
-    // data.forEach((data) {
-    //   startX++;
-
-    //   timeSeries.add(TimeSeriesModel(
-    //     timeSeries: "${data['time']}",
-    //     penjualan: data['jumlah'],
-    //     x: startX,
-    //     y: data['jumlah'],
-    //     xx: startX * startX,
-    //     xy: startX * data['jumlah']
-    //   ));
-
-    //   print("${data['time']} - X : $startX | Y : ${data['jumlah']} | XX : ${startX * startX} | XY : ${startX * data['jumlah']}");
-    // });
-
     timeSeries.forEach((element) {
       sumX += element.x;
       sumY += element.y;
@@ -544,7 +461,8 @@ class _PrediksiPageState extends State<PrediksiPage> {
       sumXY += element.xy;
     });
 
-    int n = data.length;
+    int n = allData.length;
+    print("jumlah data : $n");
     print("sum X : $sumX | sum Y : $sumY | sum XX : $sumXX | sum XY : $sumXY");
     print("rata rata X : ${sumX / n} | rata rata Y : ${sumY / n}");
 
