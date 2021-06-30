@@ -1,6 +1,6 @@
-# spk
+# Sistem Penunjang Keputusan
 
-A new Flutter project.
+Aplikasi prediksi penjualan soto ayam menggunakan metode forecasting dan regresi linier.
 
 ## Getting Started
 
